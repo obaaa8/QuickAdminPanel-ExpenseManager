@@ -75,13 +75,33 @@
                     </a>
                 </li>
             @endcan
-            @can('income_access')
+            @can('order_access')
                 <li class="nav-item">
-                    <a href="{{ route("admin.incomes.index") }}" class="nav-link {{ request()->is('admin/incomes') || request()->is('admin/incomes/*') ? 'active' : '' }}">
+                    <a href="{{ route("admin.orders.index") }}" class="nav-link {{ request()->is('admin/orders') || request()->is('admin/orders/*') ? 'active' : '' }}">
                         <i class="fa-fw fas fa-arrow-circle-right nav-icon">
 
                         </i>
-                        {{ trans('cruds.income.title') }}
+                        الطلبيات
+                    </a>
+                </li>
+            @endcan
+            @can('shift_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.shifts.index") }}" class="nav-link {{ request()->is('admin/shifts') || request()->is('admin/shifts/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-arrow-circle-right nav-icon">
+
+                        </i>
+                        الورديات
+                    </a>
+                </li>
+            @endcan
+            @can('customer_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.customers.index") }}" class="nav-link {{ request()->is('admin/customers') || request()->is('admin/customers/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-arrow-circle-right nav-icon">
+
+                        </i>
+                        الزبائن
                     </a>
                 </li>
             @endcan

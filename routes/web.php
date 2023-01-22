@@ -37,4 +37,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Expensereports
     Route::delete('expense-reports/destroy', 'ExpenseReportController@massDestroy')->name('expense-reports.massDestroy');
     Route::resource('expense-reports', 'ExpenseReportController');
+
+    // Shifts
+    Route::delete('shifts/destroy', 'ShiftController@massDestroy')->name('shifts.massDestroy');
+    Route::resource('shifts', 'ShiftController');
+
+    
+    // Orders
+    Route::delete('orders/destroy', 'OrderController@massDestroy')->name('orders.massDestroy');
+    Route::resource('orders', 'OrderController');
+
+    // Customers
+    Route::delete('customers/destroy', 'CustomerController@massDestroy')->name('customers.massDestroy');
+    Route::resource('customers', 'CustomerController');
 });
